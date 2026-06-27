@@ -1,25 +1,35 @@
-# Next.js Skills
+# Next.js App Router — Claude Code Plugin
 
-A set of Claude Skills for **creating and maintaining a quintessential Next.js
-application** with the App Router and React Server/Client Components. These encode
-the *ideal and dogmatic* way to build modern Next.js apps.
+A Claude Code **plugin** of skills for **creating and maintaining a quintessential
+Next.js application** with the App Router and React Server/Client Components. These
+encode the *ideal and dogmatic* way to build modern Next.js apps.
 
 > Target: **Next.js 16+** (App Router, Turbopack default, React 19.2). Where the
 > framework moves fast — especially **caching** — verify specifics against the
 > installed version using the Context7 MCP (`/vercel/next.js`).
 
+## Install as a plugin
+
+```sh
+/plugin marketplace add <owner/repo>          # the repo hosting this plugin
+/plugin install nextjs-app-router@<marketplace-name>
+```
+
+Or browse interactively with `/plugin`. Once enabled, the skills below activate
+automatically when a task matches their description.
+
 ## The skills
 
 | Skill | Use it when |
 |---|---|
-| [`nextjs-app-architecture`](./nextjs-app-architecture/SKILL.md) | Scaffolding an app, adding routes, organizing folders, file conventions (layouts/pages/loading/error/route groups/dynamic/parallel/intercepting), Route Handlers, `proxy.ts`, config. |
-| [`nextjs-server-client-components`](./nextjs-server-client-components/SKILL.md) | Writing React components, deciding Server vs Client, drawing the `'use client'` boundary, composition, context providers, `server-only`/`client-only`. |
-| [`nextjs-data-fetching-and-caching`](./nextjs-data-fetching-and-caching/SKILL.md) | Reading data, static vs dynamic, the Next 16 caching model (`'use cache'`, `cacheLife`, `cacheTag`, Cache Components/PPR), Suspense streaming, ISR, revalidation. |
-| [`nextjs-server-actions-and-forms`](./nextjs-server-actions-and-forms/SKILL.md) | Writing data: Server Actions, forms, `useActionState`/`useFormStatus`, validation, auth, optimistic UI, progressive enhancement. |
-| [`nextjs-state-management`](./nextjs-state-management/SKILL.md) | Deciding where state lives — server vs URL vs form vs local vs global — and the tool for each (Server Components, `searchParams`/nuqs, Context, Zustand/Jotai, TanStack Query/SWR). |
-| [`nextjs-auth-and-authorization`](./nextjs-auth-and-authorization/SKILL.md) | Login/sessions, the Data Access Layer pattern, defense-in-depth (`proxy.ts` is not a security boundary), RBAC, DTOs, and picking Auth.js/Clerk/WorkOS. |
-| [`nextjs-testing`](./nextjs-testing/SKILL.md) | The unit-vs-E2E split: Vitest + RTL for client components/Server Action logic/utils, Playwright for E2E and async Server Components, MSW for mocking. |
-| [`nextjs-rendering-and-performance`](./nextjs-rendering-and-performance/SKILL.md) | Loading/error states, streaming, PPR, Metadata API & SEO, `next/image`/`next/font`/`next/script`, reducing client JS, Core Web Vitals. |
+| [`nextjs-app-architecture`](./skills/nextjs-app-architecture/SKILL.md) | Scaffolding an app, adding routes, organizing folders, file conventions (layouts/pages/loading/error/route groups/dynamic/parallel/intercepting), Route Handlers, `proxy.ts`, config. |
+| [`nextjs-server-client-components`](./skills/nextjs-server-client-components/SKILL.md) | Writing React components, deciding Server vs Client, drawing the `'use client'` boundary, composition, context providers, `server-only`/`client-only`. |
+| [`nextjs-data-fetching-and-caching`](./skills/nextjs-data-fetching-and-caching/SKILL.md) | Reading data, static vs dynamic, the Next 16 caching model (`'use cache'`, `cacheLife`, `cacheTag`, Cache Components/PPR), Suspense streaming, ISR, revalidation. |
+| [`nextjs-server-actions-and-forms`](./skills/nextjs-server-actions-and-forms/SKILL.md) | Writing data: Server Actions, forms, `useActionState`/`useFormStatus`, validation, auth, optimistic UI, progressive enhancement. |
+| [`nextjs-state-management`](./skills/nextjs-state-management/SKILL.md) | Deciding where state lives — server vs URL vs form vs local vs global — and the tool for each (Server Components, `searchParams`/nuqs, Context, Zustand/Jotai, TanStack Query/SWR). |
+| [`nextjs-auth-and-authorization`](./skills/nextjs-auth-and-authorization/SKILL.md) | Login/sessions, the Data Access Layer pattern, defense-in-depth (`proxy.ts` is not a security boundary), RBAC, DTOs, and picking Auth.js/Clerk/WorkOS. |
+| [`nextjs-testing`](./skills/nextjs-testing/SKILL.md) | The unit-vs-E2E split: Vitest + RTL for client components/Server Action logic/utils, Playwright for E2E and async Server Components, MSW for mocking. |
+| [`nextjs-rendering-and-performance`](./skills/nextjs-rendering-and-performance/SKILL.md) | Loading/error states, streaming, PPR, Metadata API & SEO, `next/image`/`next/font`/`next/script`, reducing client JS, Core Web Vitals. |
 
 They cross-reference each other; a real task usually touches several (e.g. a CRUD
 feature = architecture + server/client + actions + caching + rendering).

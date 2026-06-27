@@ -1,0 +1,15 @@
+{
+  "name": "payload-website",
+  "description": "Opinionated skills for building content-driven websites on Payload v4 running natively in Next.js (App Router) — conventions, collections, layout blocks, RSC data fetching, and Postgres migration/deploy.",
+  "version": "0.1.0",
+  "author": {
+    "name": "anotherdish"
+  },
+  "keywords": [
+    "payload",
+    "payloadcms",
+    "nextjs",
+    "cms",
+    "app-router"
+  ]
+}

@@ -1,8 +1,13 @@
-# CLAUDE.md — Payload + Next.js Website
+---
+name: payload-conventions
+description: Opinionated always-on conventions for building a content-driven website on Payload v4 running natively inside Next.js (App Router) — the stack, project structure, config rules, TypeScript/coding patterns, access-control security, server functions, drafts/preview/revalidation, RSC data fetching, and Postgres migrations. Load this whenever working in (or scaffolding) a Payload + Next.js codebase, before editing payload.config.ts, collections, globals, blocks, access functions, hooks, or frontend data fetching. Pairs with the scaffold-payload-collection, add-payload-block, payload-frontend-fetch, and payload-migrate-deploy skills.
+---
+
+# Payload + Next.js Website Conventions
 
 Opinionated rules for building a content-driven website on **Payload v4** running natively inside **Next.js (App Router)**. These rules encode the conventions of the official `templates/website` starter. Follow them unless the user explicitly overrides.
 
-When the work matches one, invoke the bundled skill instead of improvising:
+When the work matches a heavier workflow, use the companion skill instead of improvising:
 
 - **scaffold-payload-collection** — create a Collection or Global (access, slug, SEO, drafts, preview, revalidation).
 - **add-payload-block** — add a layout-builder Block (`config.ts` + `Component.tsx` + register + render).
