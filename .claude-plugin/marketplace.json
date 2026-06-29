@@ -1,0 +1,38 @@
+{
+  "name": "opinions",
+  "owner": {
+    "name": "anotherdish"
+  },
+  "metadata": {
+    "description": "Opinionated Claude Code plugins for building modern web apps.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "nextjs-app-router",
+      "source": "./web/nextjs",
+      "description": "Opinionated skills for building a quintessential Next.js 16 App Router app — architecture, Server/Client Components, data fetching & caching, Server Actions & forms, state, auth, testing, and rendering/performance.",
+      "category": "web",
+      "keywords": [
+        "nextjs",
+        "app-router",
+        "react",
+        "rsc",
+        "server-components"
+      ]
+    },
+    {
+      "name": "payload-website",
+      "source": "./web/payload",
+      "description": "Opinionated skills for building content-driven websites on Payload v4 running natively in Next.js (App Router) — conventions, collections, layout blocks, RSC data fetching, and Postgres migration/deploy.",
+      "category": "web",
+      "keywords": [
+        "payload",
+        "payloadcms",
+        "nextjs",
+        "cms",
+        "app-router"
+      ]
+    }
+  ]
+}
