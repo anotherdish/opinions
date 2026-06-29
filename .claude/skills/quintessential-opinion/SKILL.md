@@ -44,8 +44,9 @@ edge-cases, contested opinions, and anything the official docs already make obvi
    skill**, heavy workflows (scaffolding a component, deploy) get their own. Most plugins
    need one always-on "conventions/dogma" skill plus a handful of focused ones. Present
    the list (`name` + one-line purpose) and **get approval before writing files.**
+   The always-on skill should be implemented as part of a claude rule
 
-4. **Scaffold (or locate) the plugin.** Create `<category>/<framework-kebab>/`:
+5. **Scaffold (or locate) the plugin.** Create `<category>/<framework-kebab>/`:
    ```
    <category>/<plugin-name>/
    ├── .claude-plugin/plugin.json   # name, description, version "0.1.0", author, keywords
@@ -55,14 +56,14 @@ edge-cases, contested opinions, and anything the official docs already make obvi
    If updating an existing plugin, read every current skill first and edit in place —
    don't duplicate. `plugin.json.name` must equal the marketplace plugin name.
 
-5. **Write each skill** (see conventions below). Ground every rule in the research; don't
+6. **Write each skill** (see conventions below). Ground every rule in the research; don't
    pad with generic advice the sources don't back.
 
-6. **Register in `marketplace.json`.** Add a `plugins[]` entry: `name` (matches
+7. **Register in `marketplace.json`.** Add a `plugins[]` entry: `name` (matches
    `plugin.json`), `source: "./<category>/<plugin-name>"`, a description that front-loads
    the framework and lists what's covered, `category`, and `keywords`.
 
-7. **Report.** List the plugin path, each skill + the sources that back it, and any
+8. **Report.** List the plugin path, each skill + the sources that back it, and any
    research that was thin or failed to fetch.
 
 ## SKILL.md conventions (match this repo — be concise and direct)
