@@ -83,8 +83,3 @@ completeness, cut it.
   docs (Context7) rather than trusting the skill's snapshot.
 - One always-on conventions skill should restate the stack and the overarching dogma so
   the plugin works even when only that skill loads.
-
-This reuses the authoring conventions of the `generate-skills` skill — that skill turns a
-`metadata.md` source manifest into skills; this one does the research itself and produces
-a full plugin. Use `generate-skills` instead when the user has already curated the sources
-in a `metadata.md`.
