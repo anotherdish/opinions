@@ -11,7 +11,7 @@
     {
       "name": "nextjs-app-router",
       "source": "./web/nextjs",
-      "description": "Opinionated skills for building a quintessential Next.js 16 App Router app — architecture, Server/Client Components, data fetching & caching, Server Actions & forms, state, auth, testing, and rendering/performance.",
+      "description": "Opinionated skills for building a quintessential Next.js 16 App Router app — conventions/dogma, architecture, Server/Client Components, data fetching & caching, Server Actions & forms, state, auth, testing, and rendering/performance.",
       "category": "web",
       "keywords": [
         "nextjs",

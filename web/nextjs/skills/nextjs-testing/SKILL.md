@@ -10,6 +10,10 @@ reliably renderable in unit runners (Vitest/Jest) yet.** That single fact drives
 whole strategy — unit-test what runs as plain functions or client components, and
 push everything server-rendered, cookie-, router-, or streaming-dependent into E2E.
 
+> Targets **Next.js 16+**. Tooling (Vitest, Playwright, the `@next/playwright`
+> helper) and async-RSC support move fast — verify against the installed versions;
+> use the Context7 MCP (`/vercel/next.js`) for Next itself.
+
 ## Dogma
 
 1. **Two tools, clear split.** **Vitest** (or Jest) + **React Testing Library** for

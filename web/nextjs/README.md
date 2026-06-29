@@ -22,6 +22,7 @@ automatically when a task matches their description.
 
 | Skill | Use it when |
 |---|---|
+| [`nextjs-conventions`](./skills/nextjs-conventions/SKILL.md) | **Always-on baseline** — the stack, the server-first model, and the overarching dogma; routes you to the focused skills below. Loads on any Next.js task. |
 | [`nextjs-app-architecture`](./skills/nextjs-app-architecture/SKILL.md) | Scaffolding an app, adding routes, organizing folders, file conventions (layouts/pages/loading/error/route groups/dynamic/parallel/intercepting), Route Handlers, `proxy.ts`, config. |
 | [`nextjs-server-client-components`](./skills/nextjs-server-client-components/SKILL.md) | Writing React components, deciding Server vs Client, drawing the `'use client'` boundary, composition, context providers, `server-only`/`client-only`. |
 | [`nextjs-data-fetching-and-caching`](./skills/nextjs-data-fetching-and-caching/SKILL.md) | Reading data, static vs dynamic, the Next 16 caching model (`'use cache'`, `cacheLife`, `cacheTag`, Cache Components/PPR), Suspense streaming, ISR, revalidation. |

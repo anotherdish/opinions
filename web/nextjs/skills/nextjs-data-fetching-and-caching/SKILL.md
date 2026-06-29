@@ -12,6 +12,23 @@ Next 14/15 caching assumptions you will be wrong — read the model section firs
 > Always confirm caching specifics against the installed version via the Context7
 > MCP (`/vercel/next.js`). Caching is the fastest-moving part of Next.js.
 
+## Dogma (the non-negotiables)
+
+1. **Read data in `async` Server Components.** No `useEffect` + client `fetch`, no
+   API route in between. Keep the fetch in a `lib/` function (testable, reusable).
+2. **Dynamic by default; cache explicitly.** Next 16 caches nothing on its own — opt
+   in with `'use cache'` + `cacheLife` + `cacheTag`. Don't carry over 14/15 defaults.
+3. **Tag everything you cache.** A cache entry without a `cacheTag` can't be
+   precisely invalidated after a write.
+4. **Request-time data goes inside `<Suspense>`.** `cookies()`/`headers()`/
+   `searchParams`/uncached `fetch` outside a boundary forces the whole route dynamic.
+5. **Parallelize independent reads.** `Promise.all` (or independent Suspense
+   boundaries) — never a sequential `await` waterfall.
+6. **Personalized data is never plain `'use cache'`.** Use `'use cache: private'` or
+   no cache, or it leaks across users.
+7. **Revalidate after every write** with the API matching the freshness you need
+   (`updateTag` for read-your-writes, `revalidateTag(tag, profile)` for SWR).
+
 ## Fetch data in Server Components
 
 The default and best place to read data is an `async` Server Component. No

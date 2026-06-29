@@ -9,6 +9,26 @@ How to ship a fast, polished Next.js app: stream UI progressively, handle errors
 and missing pages, optimize assets, and own SEO/metadata. The App Router gives most
 of this for free if you use the conventions.
 
+> Targets **Next.js 16+** (React 19.2). Image/metadata defaults and PPR move fast —
+> verify specifics against the installed version with the Context7 MCP
+> (`/vercel/next.js`).
+
+## Dogma (the non-negotiables)
+
+1. **Stream, don't block.** Render the shell instantly; wrap every independently-slow
+   region in its own `<Suspense>` (or a `loading.tsx`). Never `await` a slow fetch
+   above the boundary.
+2. **Skeletons match final layout.** Mismatched fallbacks cause layout shift (CLS).
+3. **Use the platform primitives.** `next/image`, `next/font`, `next/script`,
+   `next/link`, the Metadata API — never raw `<img>`/`@font-face`/`<script>`/`<a>`/
+   `<head>` tags.
+4. **`priority` the LCP image; size everything.** Above-the-fold hero gets `priority`;
+   every image/embed gets dimensions to prevent CLS.
+5. **Less client JS is the biggest lever.** Default to Server Components; push the
+   `'use client'` boundary leaf-ward so heavy deps stay server-side.
+6. **`error.tsx` must be `'use client'`;** request-time data must live inside a
+   Suspense boundary for the route to prerender a shell (PPR).
+
 ## Streaming & loading states
 
 Stream the page shell instantly and let slow parts fill in. Two mechanisms:

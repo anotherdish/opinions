@@ -10,6 +10,10 @@ In a server-first app, the first question is never "which state library?" — it
 was really *server data cached on the client*. In the App Router the server owns
 that data, so the amount of client state you need collapses dramatically.
 
+> Targets **Next.js 16+** + **React 19.2**. Verify library specifics (nuqs, TanStack
+> Query, Zustand) and App-Router caveats against the installed versions; use the
+> Context7 MCP (`/vercel/next.js`) for Next itself.
+
 ## Dogma
 
 1. **Server state is not client state.** Data owned by the backend belongs in

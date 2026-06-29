@@ -10,6 +10,10 @@ are callable from client/server components and `<form action>` — they replace
 hand-rolled API routes for mutations. This is the canonical mutation path in the
 App Router.
 
+> Targets **Next.js 16+** + **React 19.2**. The revalidation APIs
+> (`updateTag`/`revalidateTag` signatures) move fast — verify against the installed
+> version with the Context7 MCP (`/vercel/next.js`).
+
 ## Dogma
 
 1. **Mutations are Server Actions, not API routes.** Don't build `app/api/*` +

@@ -9,6 +9,10 @@ The single most important mental shift in the App Router: **you are building a
 server app with islands of client interactivity, not a client app that calls the
 server.** Get the boundary right and everything else follows.
 
+> Targets **Next.js 16+** + **React 19.2**. RSC/`'use client'` semantics and the
+> React Compiler move fast — verify specifics against the installed version with the
+> Context7 MCP (`/vercel/next.js`).
+
 ## The mental model
 
 - **Server Components are the default.** Every component in `app/` is a Server

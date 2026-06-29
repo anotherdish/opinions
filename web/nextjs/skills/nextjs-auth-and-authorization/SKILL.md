@@ -9,6 +9,10 @@ Authentication = *who are you*. Authorization = *what may you do*. In the App Ro
 the cardinal rule is **defense-in-depth: verify at the data layer, not just the
 edge.** A pretty redirect in `proxy.ts` is UX, not security.
 
+> Targets **Next.js 16+**. Auth library APIs (Auth.js v5, Clerk, WorkOS) and the
+> `proxy.ts` migration move fast — verify against the installed versions; use the
+> Context7 MCP (`/vercel/next.js`) for Next itself.
+
 ## Dogma
 
 1. **`proxy.ts` (middleware) is NOT a security boundary.** It's an optimistic gate
